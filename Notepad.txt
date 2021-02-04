@@ -1,0 +1,22 @@
+30.01.21 =>
+    Chapter 1.1 to 2.1
+        digits, string, touple => immutable objects
+31.01.21 =>
+    Chapter 1.2 to 2.4
+        () => list
+        [] => touple
+        {} => dictionary
+            [] => get
+            : => derive
+        set([]) => multitudes
+            unique value
+        | => concatenation
+        & => intersection
+        - => subtraction
+        in => entry
+01.02.21 =>
+    Chapter 3.1
+        if | else | elif
+        while
+            break => stop
+            continue => skip
