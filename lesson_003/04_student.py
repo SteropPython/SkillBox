@@ -12,3 +12,16 @@
 educational_grant, expenses = 10000, 12000
 
 # TODO здесь ваш код
+
+expensesCount = expenses
+
+x = 1
+
+while x in range(10):
+    expenses += expenses * 0.03
+    expensesCount += expenses
+    x += 1
+
+totalCount = expensesCount - (educational_grant * 10)
+
+print('Студенту надо попросить', format(totalCount, '.2f'), 'рублей')
