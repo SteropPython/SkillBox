@@ -30,10 +30,10 @@ paper_x, paper_y = 11, 9
 # else:
 #     print('Side X of paper more than enbvelop')
 
-if paper_x < envelop_x and paper_y < envelop_y:
-    print('FIT')
-else:
-    print('Oversize')
+# if paper_x < envelop_x and paper_y < envelop_y:
+#     print('FIT')
+# else:
+#     print('Oversize')
 
 # Усложненное задание, решать по желанию.
 # Заданы размеры hole_x, hole_y прямоугольного отверстия и размеры brick_х, brick_у, brick_z кирпича (все размеры
@@ -41,14 +41,14 @@ else:
 #
 # Определить, пройдет ли кирпич через отверстие (грани кирпича параллельны сторонам отверстия)
 
-# hole_x, hole_y = 8, 9
-# brick_x, brick_y, brick_z = 11, 10, 2
+hole_x, hole_y = 8, 9
+#brick_x, brick_y, brick_z = 11, 10, 2
 # brick_x, brick_y, brick_z = 11, 2, 10
 # brick_x, brick_y, brick_z = 10, 11, 2
 # brick_x, brick_y, brick_z = 10, 2, 11
 # brick_x, brick_y, brick_z = 2, 10, 11
 # brick_x, brick_y, brick_z = 2, 11, 10
-# brick_x, brick_y, brick_z = 3, 5, 6
+#brick_x, brick_y, brick_z = 3, 5, 6
 # brick_x, brick_y, brick_z = 3, 6, 5
 # brick_x, brick_y, brick_z = 6, 3, 5
 # brick_x, brick_y, brick_z = 6, 5, 3
@@ -63,3 +63,8 @@ else:
 # (просто раскоментировать нужную строку и проверить свой код)
 
 # TODO здесь ваш код
+
+if brick_x < hole_x and brick_y < hole_y:
+    print('FIT')
+else:
+    print('Oversize')
