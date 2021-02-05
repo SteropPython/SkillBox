@@ -1,10 +1,10 @@
 30.01.21 =>
     Chapter 1.1 to 2.1
-        digits, string, touple => immutable objects
+        digits, string, tuple => immutable objects
 31.01.21 =>
     Chapter 1.2 to 2.4
         () => list
-        [] => touple
+        [] => tuple
         {} => dictionary
             [] => get
             : => derive

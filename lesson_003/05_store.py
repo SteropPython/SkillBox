@@ -47,9 +47,22 @@ store = {
 #     вывод на консоль количества и стоимости товара на складе
 
 # TODO здесь ваш код
+amountTuple = []
 
+for i in goods:
+    
+    lotName = i
+    lotCount = 0
+    lotCost = 0
+    
+    for j in store[goods[i]]:
+        lotCost += list(j.values())[0] * list(j.values())[1]
+        lotCount += list(j.values())[0]
+    
+    listDictionary = {'lot': i, 'count': lotCount, 'cost': lotCost}
+    
+    amountTuple.append(listDictionary)
 
-
-
-
+for i in amountTuple:
+    print('Count of goods by name -', list(i.values())[0], '=', list(i.values())[1], 'for total cost =', list(i.values())[2])
 
