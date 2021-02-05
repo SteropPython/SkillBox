@@ -17,7 +17,10 @@
 01.02.21 =>
     Chapter 3.1
         if | else | elif
+        for
         while
+
+        
             break => stop
             continue => skip
 02.02.21 =>
