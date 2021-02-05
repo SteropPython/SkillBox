@@ -15,19 +15,25 @@ envelop_x, envelop_y = 10, 7
 #paper_x, paper_y = 9, 8
 # paper_x, paper_y = 6, 8
 # paper_x, paper_y = 8, 6
-paper_x, paper_y = 3, 4
-#paper_x, paper_y = 11, 9
+#paper_x, paper_y = 3, 4
+paper_x, paper_y = 11, 9
 # paper_x, paper_y = 9, 11
 # (просто раскоментировать нужную строку и проверить свой код)
 
 # TODO здесь ваш код
-if paper_x < envelop_x:
-    if paper_y < envelop_y:
-        print('Fits')
-    else:
-        print('Side Y of paper more than enbvelop')
+
+# if paper_x < envelop_x:
+#     if paper_y < envelop_y:
+#         print('Fits')
+#     else:
+#         print('Side Y of paper more than enbvelop')
+# else:
+#     print('Side X of paper more than enbvelop')
+
+if paper_x < envelop_x and paper_y < envelop_y:
+    print('FIT')
 else:
-    print('Side X of paper more than enbvelop')
+    print('Oversize')
 
 # Усложненное задание, решать по желанию.
 # Заданы размеры hole_x, hole_y прямоугольного отверстия и размеры brick_х, brick_у, brick_z кирпича (все размеры
