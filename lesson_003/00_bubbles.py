@@ -40,20 +40,26 @@ sd.resolution = (1000, 1000)
 # Нарисовать три ряда по 10 пузырьков
 # TODO здесь ваш код
 
-rad = 30
+# rad = 30
 
-x, y = 35, 35
+# x, y = 35, 35
 
-for j in range(3):
-    z = -35
-    for i in range(10):
-        z += 2 * x
-        point = sd.get_point(z,y)
-        sd.circle(center_position=point, radius=rad)
-    y += rad * 4
+# for j in range(3):
+#     z = -35
+#     for i in range(10):
+#         z += 2 * x
+#         point = sd.get_point(z,y)
+#         sd.circle(center_position=point, radius=rad)
+#     y += rad * 4
 
 # Нарисовать 100 пузырьков в произвольных местах экрана случайными цветами
 # TODO здесь ваш код
+
+for _ in range(100):
+    radiusCircle = sd.random_number()
+    pointCircle = sd.random_point()
+    colorCircle = sd.random_color()
+    sd.circle(center_position=pointCircle, radius=radiusCircle, color=colorCircle)
 
 sd.pause()
 
