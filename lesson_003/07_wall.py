@@ -25,7 +25,7 @@ for startPointY in range(0, finishPointY, brickHight):
         startPoint = simple_draw.get_point(startPointX, startPointY)
         endPoint = simple_draw.get_point(startPointX + brickWidth, startPointY + brickHight)
         colorRectangle = simple_draw.random_color()
-        simple_draw.rectangle(left_bottom = startPoint, right_top = endPoint, color = colorRectangle, width = 2)
+        simple_draw.rectangle(startPoint, endPoint, colorRectangle, 2)
         startPointX += brickWidth
     startPointY += brickHight
     startPointX = 0

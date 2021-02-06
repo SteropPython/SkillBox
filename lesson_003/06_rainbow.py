@@ -20,7 +20,7 @@ rainbow_colors = (sd.COLOR_RED, sd.COLOR_ORANGE, sd.COLOR_YELLOW, sd.COLOR_GREEN
 #     currentColor = rainbow_colors[i]
 #     startPoint = sd.get_point(startPointX, startPointY)
 #     endPoint = sd.get_point(finishPointX, finishPointY)
-#     sd.line(start_point = startPoint, end_point = endPoint, color=currentColor, width = 15)
+#     sd.line(startPoint, endPoint, currentColor, 15)
 #     startPointX += 15
 #     finishPointX += 15
 
@@ -33,7 +33,7 @@ pointStartRainbow = sd.get_point(0,0)
 radiusRainbow = 500
 for i in range(7):
     currentColor = rainbow_colors[i]
-    sd.circle(center_position=pointStartRainbow, radius=radiusRainbow, color = currentColor, width=50)
+    sd.circle(pointStartRainbow, radiusRainbow, currentColor, 50)
     radiusRainbow += 50
 
 sd.pause()

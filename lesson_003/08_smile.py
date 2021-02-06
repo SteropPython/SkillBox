@@ -28,13 +28,13 @@ simple_draw.resolution = (1000, 1000)
 #     lipCornerCenter = simple_draw.get_point(startPointX, startPointY - 40)
 
 
-#     simple_draw.circle(center_position = pointSmile, radius = radiusSmaile, color = colorSmile, width = 2)
+#     simple_draw.circle(pointSmile, radiusSmaile, colorSmile, 2)
 
-#     simple_draw.circle(center_position = eyeLeft, radius = eyeRadius, width = 2)
+#     simple_draw.circle(eyeLeft, eyeRadius, 2)
 
-#     simple_draw.circle(center_position = eyeRight, radius = eyeRadius, width = 2)
+#     simple_draw.circle(eyeRight, eyeRadius, 2)
 
-#     simple_draw.lines((lipCornerLeft, lipCornerCenter, lipCornerRight), closed=True, width=2)
+#     simple_draw.lines((lipCornerLeft, lipCornerCenter, lipCornerRight), True, 2)
 
 # printSmile(200, 300, 'COLOR_ORANGE')
 
@@ -62,13 +62,13 @@ def printSmileRandom():
         lipCornerCenter = simple_draw.get_point(startPointX, startPointY - 40)
 
 
-        simple_draw.circle(center_position = pointSmile, radius = radiusSmaile, color = colorSmile, width = 2)
+        simple_draw.circle(pointSmile, radiusSmaile, colorSmile, 2)
 
-        simple_draw.circle(center_position = eyeLeft, radius = eyeRadius, color = colorSmile, width = 2)
+        simple_draw.circle(eyeLeft, eyeRadius, colorSmile, 2)
 
-        simple_draw.circle(center_position = eyeRight, radius = eyeRadius, color = colorSmile, width = 2)
+        simple_draw.circle(eyeRight, eyeRadius, colorSmile, 2)
 
-        simple_draw.lines((lipCornerLeft, lipCornerCenter, lipCornerRight), color = colorSmile, closed=True, width=2)
+        simple_draw.lines((lipCornerLeft, lipCornerCenter, lipCornerRight), colorSmile, True, 2)
 
 
 printSmileRandom()
