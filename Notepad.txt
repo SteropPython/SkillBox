@@ -27,3 +27,14 @@
     Chapter 3.2
 06.02.21 =>
     Chapter 4.1
+        * => position unpack for list
+        ** => name unpack for dictionary
+            name after position
+            can be combined
+        * => zip to tuple unnamed for params in function => args
+        ** => zip to dictionary named for params in function => kwargs
+            name after position
+            can be combined
+
+
+
