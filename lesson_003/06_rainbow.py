@@ -36,4 +36,5 @@ for i in range(7):
     sd.circle(pointStartRainbow, radiusRainbow, currentColor, 50)
     radiusRainbow += 50
 
+
 sd.pause()
