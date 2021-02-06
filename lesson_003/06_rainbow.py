@@ -29,7 +29,7 @@ rainbow_colors = (sd.COLOR_RED, sd.COLOR_ORANGE, sd.COLOR_YELLOW, sd.COLOR_GREEN
 # поэкспериментировать с параметрами, что бы было красиво
 # TODO здесь ваш код
 
-pointStartRainbow = sd.get_point(0,0)
+pointStartRainbow = sd.get_point(0, 0)
 radiusRainbow = 500
 for i in range(7):
     currentColor = rainbow_colors[i]
