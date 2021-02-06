@@ -11,4 +11,6 @@ import simple_draw as sd
 
 # TODO здесь ваш код
 
+# accidentally performed in the first task
+
 sd.pause()
