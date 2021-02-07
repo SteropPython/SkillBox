@@ -38,38 +38,21 @@ import simple_draw as sd
 # draw_branches(300, 0, 90, 50)
 
 def draw_branches(x, y, angle, length):
+
     if length < 10:
         return
+
     start_point = sd.get_point(x, y)
 
     plus_point = sd.vector(start_point, angle + 30, length, width=2)
-
-    next_plus_angle = angle + 30
-    next_plus_length = length * 0.75
-
-    for i in range(5):
-        draw_branches(plus_point.x, plus_point.y, next_plus_angle, next_plus_length)
-        i += 1
-
     minus_point = sd.vector(start_point, angle - 30, length, width=2)
 
+    next_length = length * 0.75
+    next_plus_angle = angle + 30
     next_minus_angle = angle - 30
-    next_minus_length = length * 0.75
 
-    for i in range(5):
-        draw_branches(minus_point.x, minus_point.y, next_minus_angle, next_minus_length)
-        i += 1
-
-    #next_plus_point = sd.get_point(plus_point.x, plus_point.y)
-    #next_minus_point = sd.get_point(minus_point.x, minus_point.y)
-    # next_plus_angle = angle + 30
-    # next_minus_angle = angle - 30
-    # next_length = length * 0.75
-    #
-    # draw_branches(plus_point.x, plus_point.y, next_plus_angle, next_length)
-    #draw_branches(minus_point.x, minus_point.y, next_minus_angle, next_length)
-
-
+    draw_branches(plus_point.x, plus_point.y, next_plus_angle, next_length)
+    draw_branches(minus_point.x, minus_point.y, next_minus_angle, next_length)
 
 
 draw_branches(300, 0, 90, 50)
