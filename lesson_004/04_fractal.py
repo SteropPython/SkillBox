@@ -37,25 +37,47 @@ import simple_draw as sd
 #
 # draw_branches(300, 0, 90, 50)
 
-def draw_branches(x, y, angle, length):
+# def draw_branches(x, y, angle, length):
+#
+#     if length < 10:
+#         return
+#
+#     start_point = sd.get_point(x, y)
+#
+#     plus_point = sd.vector(start_point, angle + 30, length, width=2)
+#     minus_point = sd.vector(start_point, angle - 30, length, width=2)
+#
+#     next_length = length * 0.75
+#     next_plus_angle = angle + 30
+#     next_minus_angle = angle - 30
+#
+#     draw_branches(plus_point.x, plus_point.y, next_plus_angle, next_length)
+#     draw_branches(minus_point.x, minus_point.y, next_minus_angle, next_length)
+#
+#
+# draw_branches(300, 0, 90, 50)
+
+def draw_branches(start_point, angle, length):
 
     if length < 10:
         return
 
-    start_point = sd.get_point(x, y)
-
     plus_point = sd.vector(start_point, angle + 30, length, width=2)
     minus_point = sd.vector(start_point, angle - 30, length, width=2)
 
+    next_plus_point = sd.get_point(plus_point.x, plus_point.y)
+    next_minus_point = sd.get_point(minus_point.x, minus_point.y)
     next_length = length * 0.75
     next_plus_angle = angle + 30
     next_minus_angle = angle - 30
 
-    draw_branches(plus_point.x, plus_point.y, next_plus_angle, next_length)
-    draw_branches(minus_point.x, minus_point.y, next_minus_angle, next_length)
+    draw_branches(next_plus_point, next_plus_angle, next_length)
+    draw_branches(next_minus_point, next_minus_angle, next_length)
 
 
-draw_branches(300, 0, 90, 50)
+root_point = sd.get_point(300, 30)
+
+draw_branches(root_point, 90, 100)
 
 # 4) Усложненное задание (делать по желанию)
 # - сделать рандомное отклонение угла ветвей в пределах 40% от 30-ти градусов
