@@ -57,6 +57,33 @@ import simple_draw as sd
 #
 # draw_branches(300, 0, 90, 50)
 
+# def draw_branches(start_point, angle, length):
+#
+#     if length < 10:
+#         return
+#
+#     plus_point = sd.vector(start_point, angle + 30, length, width=2)
+#     minus_point = sd.vector(start_point, angle - 30, length, width=2)
+#
+#     next_plus_point = sd.get_point(plus_point.x, plus_point.y)
+#     next_minus_point = sd.get_point(minus_point.x, minus_point.y)
+#     next_length = length * 0.75
+#     next_plus_angle = angle + 30
+#     next_minus_angle = angle - 30
+#
+#     draw_branches(next_plus_point, next_plus_angle, next_length)
+#     draw_branches(next_minus_point, next_minus_angle, next_length)
+#
+#
+# root_point = sd.get_point(300, 30)
+#
+# draw_branches(root_point, 90, 100)
+
+# 4) Усложненное задание (делать по желанию)
+# - сделать рандомное отклонение угла ветвей в пределах 40% от 30-ти градусов
+# - сделать рандомное отклонение длины ветвей в пределах 20% от коэффициента 0.75
+# Возможный результат решения см lesson_004/results/exercise_04_fractal_02.jpg
+
 def draw_branches(start_point, angle, length):
 
     if length < 10:
@@ -67,9 +94,9 @@ def draw_branches(start_point, angle, length):
 
     next_plus_point = sd.get_point(plus_point.x, plus_point.y)
     next_minus_point = sd.get_point(minus_point.x, minus_point.y)
-    next_length = length * 0.75
-    next_plus_angle = angle + 30
-    next_minus_angle = angle - 30
+    next_length = length * (0.75 + (sd.random_number(-15, 15) / 100))
+    next_plus_angle = angle + 30 + sd.random_number(-12, 12)
+    next_minus_angle = angle - 30 - sd.random_number(-12, 12)
 
     draw_branches(next_plus_point, next_plus_angle, next_length)
     draw_branches(next_minus_point, next_minus_angle, next_length)
@@ -78,11 +105,6 @@ def draw_branches(start_point, angle, length):
 root_point = sd.get_point(300, 30)
 
 draw_branches(root_point, 90, 100)
-
-# 4) Усложненное задание (делать по желанию)
-# - сделать рандомное отклонение угла ветвей в пределах 40% от 30-ти градусов
-# - сделать рандомное отклонение длины ветвей в пределах 20% от коэффициента 0.75
-# Возможный результат решения см lesson_004/results/exercise_04_fractal_02.jpg
 
 # Пригодятся функции
 # sd.random_number()
