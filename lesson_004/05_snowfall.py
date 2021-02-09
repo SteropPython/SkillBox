@@ -2,6 +2,8 @@
 
 import simple_draw as sd
 
+sd.resolution = (1000, 1000)
+
 
 # На основе кода из практической части реализовать снегопад:
 # - создать списки данных для отрисовки N снежинок
@@ -18,14 +20,23 @@ N = 20
 # sd.user_want_exit()
 
 # TODO здесь ваш код
-while True:
-    sd.clear_screen()
-    pass
-    pass
-    pass
-    sd.sleep(0.1)
-    if sd.user_want_exit():
-        break
+
+points_tuple = []
+
+
+def snowfall_print(point):
+    while point.y > 0:
+        sd.snowflake(point)
+        sd.snowflake(point, color=sd.background_color)
+        point.y -= 5
+
+
+for i in range(N):
+    points_tuple.append(sd.random_point())
+
+for i in range(N):
+    snowfall_print(points_tuple[i])
+
 
 sd.pause()
 

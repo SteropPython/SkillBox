@@ -35,6 +35,9 @@
         ** => zip to dictionary named for params in function => kwargs
             name after position
             can be combined
+    Chapter 4.2
+07.02.21 =>
+    Chapter 4.3
 
 
 
