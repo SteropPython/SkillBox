@@ -44,3 +44,46 @@
 # Точнее, в этом случае важен принцип единственной ответственности - https://goo.gl/rYb3hT
 
 # TODO здесь ваш код...
+import mastermind_engine as me
+
+me.target_number()
+
+
+def start_game():
+    action = input('Let start GAME? \n Type YES or NO \n')
+    if action == 'yes' or action == 'YES':
+        game()
+    elif action == 'no' or action == 'NO':
+        print('Goodbye')
+    else:
+        start_game()
+
+
+def game():
+    user_attempts = 0
+    bulls = 0
+    while bulls != 4:
+        user_number = input('Enter your four-digit number:')
+        if user_number.isnumeric():
+            checker = me.check_number(user_number)
+            print('Bulls:', checker['bulls'], 'Cows:', checker['cows'])
+        else:
+            print('Try again, enter your four-digit number:')
+
+        user_attempts += 1
+
+        bulls = checker['bulls']
+
+    print('You made {} attempts'.format(user_attempts))
+
+    user_start_again = input('Play again? \n Type YES or NO \n')
+
+    if user_start_again == 'yes' or user_start_again == 'YES':
+        game()
+    elif user_start_again == 'no' or user_start_again == 'NO':
+        print('Goodbye')
+    else:
+        start_game()
+
+
+start_game()
