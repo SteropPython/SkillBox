@@ -20,6 +20,55 @@
 
 # TODO здесь ваш код
 
+import simple_draw as sd
+import drawing.rainbow as mod_rainbow
+import drawing.tree as mod_tree
+import drawing.wall as mod_wall
+import drawing.roof as mod_roof
+import drawing.snowfall as mod_snowfall
+
+# set global resolution for picture
+sd.resolution = (1920, 1080)
+
+
+# set start point for rainbow (def x=300, y=0)
+point_start_rainbow = sd.get_point(500, 0)
+
+
+# set start point for tree (def x=300, y=0)
+point_start_tree_1 = sd.get_point(1400, 0)
+point_start_tree_2 = sd.get_point(1600, 50)
+
+# set points for wall
+start_wall_point = 400
+hight_wall_point = 400
+width_wall_point = 800
+
+# set roof points
+start_roof_point = sd.get_point(start_wall_point - 10, hight_wall_point)
+finish_roof_point = sd.get_point(width_wall_point + 10, hight_wall_point)
+middle_roof_point = sd.get_point(start_wall_point + (width_wall_point - start_wall_point) / 2,
+                                 hight_wall_point + (width_wall_point - start_wall_point) / 2)
+
+
+mod_rainbow.draw_rainbow(point_start_rainbow)
+
+mod_tree.draw_tree(point_start_tree_1, length=130)
+mod_tree.draw_tree(point_start_tree_2, length=60)
+
+mod_wall.draw_wall(start_wall_point, finishPointX=width_wall_point, finishPointY=hight_wall_point)
+
+mod_roof.draw_roof(start_roof_point, middle_roof_point, finish_roof_point)
+
+mod_snowfall.draw_snowfall(earth=0)
+
+
+
+
+sd.pause()
+
+
+
 # Усложненное задание (делать по желанию)
 # Анимировать картину.
 # Пусть слева идет снегопад, радуга переливается цветами, смайлик моргает, солнце крутит лучами, етс.
