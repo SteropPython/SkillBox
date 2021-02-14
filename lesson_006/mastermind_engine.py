@@ -9,7 +9,7 @@ def target_number():
         get_number = str(random.randint(1000, 9999))
         if len(set(get_number)) == len(get_number):
             TARGET_NUMBER = get_number
-            return False
+            break
 
 
 def check_number(number):
