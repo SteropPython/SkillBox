@@ -23,22 +23,6 @@ N = 100
 
 # TODO здесь ваш код
 
-# points_tuple = []
-#
-#
-# def snowfall_print(point):
-#     while point.y > 0:
-#         sd.snowflake(point)
-#         sd.snowflake(point, color=sd.background_color)
-#         point.y -= 5
-#
-#
-# for i in range(N):
-#     points_tuple.append(sd.random_point())
-#
-# for i in range(N):
-#     snowfall_print(points_tuple[i])
-
 
 snowfall_points_tuple = []
 snowfall_lengths_tuple = []
@@ -71,7 +55,11 @@ for i in range(N):
     snowfall_points_tuple.append(sd.random_point())
 
 for i in range(N):
-    snowfall_print(snowfall_points_tuple[i], snowfall_lengths_tuple[i], snowfall_step_snowfall, snowfall_snowflake_color[i], snowfall_snowflake_angle[i])
+    snowfall_print(snowfall_points_tuple[i],
+                   snowfall_lengths_tuple[i],
+                   snowfall_step_snowfall,
+                   snowfall_snowflake_color[i],
+                   snowfall_snowflake_angle[i])
 
 
 sd.pause()
